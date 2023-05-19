@@ -1,0 +1,109 @@
+{
+  "label": "dome_standard_segment",
+
+//   "parameters": {
+//     "intParam": {
+//       "type": "int", "default": 0, "min": 0, "max": 100,
+//       "label": "Int Param",
+//       "description": "Example integer parameter"
+//     },
+//     "floatParam": {
+//       "type": "float", "default": 0.5,
+//       "label": "Float Param",
+//       "description": "Example float parameter"
+//     },
+//     "stringParam": {
+//       "type": "string", "default": "text",
+//       "label": "String Param",
+//       "description": "Example string parameter, holding a hostname"
+//     },
+//     "boolParam": {
+//       "type": "boolean", "default": false,
+//       "label": "Bool Param",
+//       "description": "Example boolean parameter"
+//     }
+//   },
+// The following segment numbers (before the colon) correspond to the drawing in Notability.
+// The following vertex numbers (in paraentheses) correspond to the numbers indicated in dome-geometry.txt.
+// Lengths || (FVE = Free Vector Equivalent)
+// 1:  40.355    (1) (40.314,-17.308,-89.815)     => (2) (20.192,17.038,-96.447)   || (-20.122,34.346,-6.632)
+// 2:  40.397    (2) (20.192,17.038,-96.447)      => (3) (32.647,51.411,-79.263)   || (12.455,34.373,17.184)
+// 3:  40.355    (3) (32.647,51.411,-79.263)      => (8) (65.295,51.411,-55.543)   || (32.648,0,23.72)
+// 4:  40.372    (3) (32.647,51.411,-79.263)      => (4) (0,72.678,-68.688)        || (-32.647,21.267,10.575)
+// 5:  40.397    (4) (0,72.678,-68.688)           => (5) (0,93.923,-34.328)        || (0,21.245,34.36)
+// 6:  40.355    (5) (0,93.923,-34.328)           => (6) (32.648,93.923,-10.608)   || (32.648,0,23.72)
+// 7:  40.372    (7) (65.326,72.678,-21.226)      => (8) (65.295,51.411,-55.543)   || (-0.031,-21.267,-34.317)
+// 8:  40.397    (8) (65.295,51.411,-55.543)      => (9) (85.487,17.038,-49.007)   || (20.192,-34.373,6.536)
+// 9:  40.383    (9) (85.487,17.038,-49.007)      => (11) (97.966,17.038,-10.6)    || ()
+// 10: 40.355    (9) (85.487,17.038,-49.007)      => (10) (72.962,-17.308,-66.095) || (-12.525,-34.346,-17.088)
+// To get yaw, compare above FVE with unit vector in the Y direction
+// To get pitch, compare above FVE with unit vector in the X direction
+// To get roll, compare above FVE with unit vector in the Z direction
+
+  "components": [
+    // 1
+    { "type": "strip",
+      "x": 40.314, "y": -17.308, "z": -89.815,
+      "numPoints": 22, "spacing": 1.834318181818182,
+      "direction": {"x": 20.192, "y": 17.038, "z": -96.447} },
+    // 2
+    { "type": "strip",
+      "x": 20.192, "y": 17.038, "z": -96.447,
+      "numPoints": 22, "spacing": 1.836227272727273,
+      "direction": {"x": 32.647, "y": 51.411, "z": -79.263} },
+    // 3
+    { "type": "strip",
+      "x": 32.647, "y": 51.411, "z": -79.263,
+      "numPoints": 22, "spacing": 1.834318181818182,
+      "direction": {"x": 65.295, "y": 51.411, "z": -55.543} },
+    // 4
+    { "type": "strip",
+      "x": 32.647, "y": 51.411, "z": -79.263,
+      "numPoints": 22, "spacing": 1.835090909090909,
+      "direction": {"x": 0, "y": 72.678, "z": -68.688} },
+    // 5
+    { "type": "strip",
+      "x": 0, "y": 72.678, "z": -68.688,
+      "numPoints": 22, "spacing": 1.836227272727273,
+      "direction": {"x": 0, "y": 93.923, "z": -34.328} },
+    // 6
+    { "type": "strip",
+      "x": 0, "y": 93.923, "z": -34.328,
+      "numPoints": 22, "spacing": 1.834318181818182,
+      "direction": {"x": 32.648, "y": 93.923, "z": -10.608} },
+    // 7
+    { "type": "strip",
+      "x": 65.326, "y": 72.678, "z": -21.226,
+      "numPoints": 22, "spacing": 1.835090909090909,
+      "direction": {"x": 65.295, "y": 51.411, "z": -55.543} },
+    // 8
+    { "type": "strip",
+      "x": 65.295, "y": 51.411, "z": -55.543,
+      "numPoints": 22, "spacing": 1.836227272727273,
+      "direction": {"x": 85.487, "y": 17.038, "z": -49.007} },
+    // 9
+    { "type": "strip",
+      "x": 85.487, "y": 17.038, "z": -49.007,
+      "numPoints": 22, "spacing": 1.835590909090909,
+      "direction": {"x": 97.966, "y": 17.038, "z": -10.6} },
+    // 10
+    { "type": "strip",
+      "x": 85.487, "y": 17.038, "z": -49.007,
+      "numPoints": 22, "spacing": 1.834318181818182,
+      "direction": {"x": 72.962, "y": -17.308, "z": -66.095} }
+  ]
+
+//   "outputs": [
+//     {
+//       "protocol": "artnet",
+//       "universe": 0,
+//       "host": "192.168.1.147",
+//       "start": 0, "num": 100
+//     }
+//   ]
+
+//   "meta": {
+//     "key1": "val2",
+//     "key3": "val4"
+//   }
+}

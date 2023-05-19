@@ -1,0 +1,26 @@
+{
+  "label": "entire_dome",
+
+  "components": [
+    { "type": "dome_double_segment_a",
+      "x": 40.314, "y": -17.308, "z": -89.815,
+      "yaw": 0 },
+    { "type": "dome_standard_segment",
+      "x": 20.177, "y": -17.308, "z": 96.358,
+      "yaw": 144 },
+    { "type": "dome_double_segment_c",
+      "x": -85.407, "y": -17.308, "z": 48.966,
+      "yaw": 216 }
+  ],
+
+  "outputs": [
+    {
+      "protocol": "artnet",
+      "universe": 0,
+      "host": "192.168.1.147",
+      "start": 0, "num": 100
+    }
+  ]
+    // "host": "192.168.1.147",
+    // "port": 7890,
+}

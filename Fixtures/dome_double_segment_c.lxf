@@ -1,0 +1,17 @@
+{
+  "label": "dome_double_segment_c",
+
+  "components": [
+    // C1
+    { "type": "dome_standard_segment",
+      "x": 40.314, "y": -17.308, "z": -89.815,
+      "yaw": 0 },
+    // C2
+    { "type": "dome_door_segment",
+      // This is just the starting point for Segment #2 in `dome-geometry.txt`.
+      // It should get transposed in the higher order `entire_dome` Fixture.
+      "x": 97.877, "y": -17.308, "z": 10.586,
+      // This is just 360 / 5 = (degrees in the circle) / (number of segments that tile to make the dome)
+      "yaw": 72 }
+  ]
+}
